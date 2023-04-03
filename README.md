@@ -17,3 +17,8 @@ Available in both english and french
   - Suivre les instructions et séléctionner le chemin de votre Gmod, ensuite vous pouvez insérer vos images
   - Séléctionner à droite l'image que vous souhaitez afficher en jeu
   - Une fois en jeu, placer un digital screen et une puce E2, placer le script contenue dans *e2imageloader.txt* dans votre puce E2 et ensuite connecter la puce au digital screen
+
+## How to build the GUI (if wanted)
+- In the gui folder:
+  - npm install
+  - npx quasar build -m electron
