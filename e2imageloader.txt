@@ -1,0 +1,101 @@
+@name E2imageloader
+@inputs Digi:wirelink
+@persist Step Data:array NiceData:string
+
+
+
+function loadFiles() {
+    
+    if(fileCanLoad()) {
+        if(Step%2==0){print(100*Step/16+"%")}
+        fileLoad("/e2shared/datafiles/e2imageloader/image"+Step+".txt")
+    }
+}
+
+function printLine() {
+    #512x512 = 262144
+    while(perf(95) & Step<=262144){
+        Digi[Step-1]=NiceData:sub((Step-1)*6,Step*6):toNumber(16)
+        Step++
+    }
+    if(Step<=262144){ 
+        timer("printLine",1)
+    }
+    else{
+        Step = 1
+        print("Transfert de l'image termine")
+    }
+    
+}
+
+function showImage() {  
+    if(!->Digi) {return}
+    Digi[1048573] = 512 #width
+    Digi[1048572] = 512 #height
+    Digi[1048569] = 2 #2=24-bit
+    Digi[1048574] = 1 #Clear screen
+    Digi[1048574] = 0
+    
+    Step=1
+    printLine()
+    
+}
+
+function sortData() {
+
+
+    while(perf(90) & Step<=16 ){
+        NiceData+=Data[Step,string] 
+        Step++        
+    }
+    
+ 
+    
+    if(Step>16) {
+        timer("showImage",10)
+    }
+    else{
+        timer("sortData",10)
+    }    
+}
+
+if (first() | dupefinished()) {
+    runOnFile(1)
+    Data = array()
+    Step = 1
+    NiceData = ""
+    
+    print("Debut du chargement")
+    loadFiles()
+    
+}
+
+if(fileClk() & fileLoaded()){
+    Data[Step,string] = fileRead()
+    Step++
+    if (Step<=16){
+        timer("loadFiles",10)
+    }
+    else{
+        Step=1
+        sortData()
+        
+    }
+}
+
+if (clk("loadFiles")){
+    loadFiles()   
+}
+
+if (clk("sortData")){
+    sortData()   
+}
+
+if (clk("showImage")){
+    showImage()   
+}
+
+if (clk("printLine")){
+    printLine()   
+}
+
