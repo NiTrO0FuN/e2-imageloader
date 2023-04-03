@@ -83,6 +83,10 @@ if(fileClk() & fileLoaded()){
     }
 }
 
+if(~Digi){
+    showImage()
+}
+
 if (clk("loadFiles")){
     loadFiles()   
 }
