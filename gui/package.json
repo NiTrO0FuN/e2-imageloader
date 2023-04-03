@@ -1,0 +1,39 @@
+{
+  "name": "eragons_image_loader",
+  "version": "0.0.1",
+  "description": "Image loader for garry's mod",
+  "productName": "E2 Image loader",
+  "author": "NiTrO_FuN",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue ./",
+    "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "axios": "^1.2.1",
+    "jimp": "^0.22.7",
+    "quasar": "^2.6.0",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.0.0",
+    "@vue/devtools": "^6.5.0",
+    "autoprefixer": "^10.4.2",
+    "electron": "^23.2.1",
+    "electron-builder": "^22.14.13",
+    "electron-packager": "^15.5.2",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "postcss": "^8.4.14",
+    "prettier": "^2.5.1"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
