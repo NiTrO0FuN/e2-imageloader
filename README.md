@@ -5,14 +5,14 @@ Available in both english and french
 ## Instructions
 
 - English
-  - Go to releases and download the last setup executable available (now only for windows)
+  - Go to <a href=https://github.com/NiTrO0FuN/e2-imageloader/releases/>releases</a> and download the last setup executable available (now only for windows)
   - Execute the installer
   - Follow the instructions to select the Gmod path and then upload images
   - Select on the right the image you'd like to see in the game
   - In garry's mod place a digital screen and an E2 chip, place the script contained in *e2imageloader.txt* into the E2 chip then connect the chip to the digital screen
 
 - French
-  - Aller dans releases et télécharger le dernier fichier .exe de setup disponible (seulement pour windows pour l'instant)
+  - Aller dans <a href=https://github.com/NiTrO0FuN/e2-imageloader/releases/>releases</a> et télécharger le dernier fichier .exe de setup disponible (seulement pour windows pour l'instant)
   - Lancer l'installeur
   - Suivre les instructions et séléctionner le chemin de votre Gmod, ensuite vous pouvez insérer vos images
   - Séléctionner à droite l'image que vous souhaitez afficher en jeu
