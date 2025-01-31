@@ -11,14 +11,11 @@ function setGPath(newPath) {
 }
 
 function isActualGPathValid() {
-  if (fs.existsSync(GmodPath + "/hl2.exe")) {
-    return true;
-  }
-  return false;
+  return isGPathValid(GmodPath);
 }
 
 function isGPathValid(path) {
-  if (fs.existsSync(path + "/hl2.exe")) {
+  if (fs.existsSync(path + "/gmod.exe")) {
     return true;
   }
   return false;

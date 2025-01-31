@@ -1,6 +1,6 @@
 {
   "name": "eragons_image_loader",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Image loader for garry's mod",
   "productName": "E2 Image loader",
   "author": "NiTrO_FuN",
@@ -30,10 +30,5 @@
     "eslint-plugin-vue": "^9.0.0",
     "postcss": "^8.4.14",
     "prettier": "^2.5.1"
-  },
-  "engines": {
-    "node": "^18 || ^16 || ^14.19",
-    "npm": ">= 6.13.4",
-    "yarn": ">= 1.21.1"
   }
 }
